@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO.JS // Terminal</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="header-badge">SYSTEM ONLINE</div>
+            <h1>My First Design</h1>
+            <p>Execute modules &gt;&gt; observe output &gt;&gt; iterate</p>
+            <div class="header-line"></div>
+        </header>
+
+        <!-- STATUS BAR -->
+        <div class="status-bar">
+            <span class="status-left"><span class="dot"></span> ALL SYSTEMS NOMINAL</span>
+            <span class="status-right">MODULES: 8 LOADED <span class="blink">_</span></span>
+        </div>
+
+        <!-- MODULE GRID -->
+        <div class="section-label">Available Modules</div>
+        <div class="grid">
+            <!-- Module 01 -->
+            <div class="card" onclick="runFunction(1)">
+                <div class="card-header">
+                    <span class="card-tag tag-var">VAR</span>
+                    <span class="card-number">01</span>
+                </div>
+                <h3>Data Storage</h3>
+                <p class="desc">Variable declaration & assignment patterns</p>
+                <div class="syntax-hint">let x = 42; const name = "neo";</div>
+            </div>
+
+            <!-- Module 02 -->
+            <div class="card" onclick="runFunction(2)">
+                <div class="card-header">
+                    <span class="card-tag tag-tmpl">TMPL</span>
+                    <span class="card-number">02</span>
+                </div>
+                <h3>String Injection</h3>
+                <p class="desc">Template literal interpolation syntax</p>
+                <div class="syntax-hint">`Hello ${name}, age: ${age}`</div>
+            </div>
+
+            <!-- Module 03 -->
+            <div class="card" onclick="runFunction(3)">
+                <div class="card-header">
+                    <span class="card-tag tag-logic">LOGIC</span>
+                    <span class="card-number">03</span>
+                </div>
+                <h3>Boolean Gates</h3>
+                <p class="desc">AND, OR, NOT operator chains</p>
+                <div class="syntax-hint">if (a && b || !c) { ... }</div>
+            </div>
+
+            <!-- Module 04 -->
+            <div class="card" onclick="runFunction(4)">
+                <div class="card-header">
+                    <span class="card-tag tag-cond">BRANCH</span>
+                    <span class="card-number">04</span>
+                </div>
+                <h3>Decision Paths</h3>
+                <p class="desc">Conditional branching & ternary ops</p>
+                <div class="syntax-hint">x > 10 ? "high" : "low"</div>
+            </div>
+
+            <!-- Module 05 -->
+            <div class="card" onclick="runFunction(5)">
+                <div class="card-header">
+                    <span class="card-tag tag-loop">LOOP</span>
+                    <span class="card-number">05</span>
+                </div>
+                <h3>Iteration Cycles</h3>
+                <p class="desc">For, while & for...of loops</p>
+                <div class="syntax-hint">for (let i = 0; i < n; i++) { }</div>
+            </div>
+
+            <!-- Module 06 -->
+            <div class="card" onclick="runFunction(6)">
+                <div class="card-header">
+                    <span class="card-tag tag-array">ARR</span>
+                    <span class="card-number">06</span>
+                </div>
+                <h3>List Operations</h3>
+                <p class="desc">Array methods & transformations</p>
+                <div class="syntax-hint">arr.map(x => x * 2).filter(...)</div>
+            </div>
+
+            <!-- Module 07 -->
+            <div class="card" onclick="runFunction(7)">
+                <div class="card-header">
+                    <span class="card-tag tag-obj">OBJ</span>
+                    <span class="card-number">07</span>
+                </div>
+                <h3>Key-Value Maps</h3>
+                <p class="desc">Object literals & destructuring</p>
+                <div class="syntax-hint">const { a, b } = obj;</div>
+            </div>
+
+            <!-- Module 08 -->
+            <div class="card" onclick="runFunction(8)">
+                <div class="card-header">
+                    <span class="card-tag tag-func">FUNC</span>
+                    <span class="card-number">08</span>
+                </div>
+                <h3>Callable Units</h3>
+                <p class="desc">Arrow functions & closures</p>
+                <div class="syntax-hint">const fn = (x) => x + 1;</div>
+            </div>
+        </div>
+
+        <!-- EXECUTE BUTTON -->
+        <button class="execute-btn" onclick="runAll()">▶ INITIALIZE ALL MODULES</button>
+
+        <!-- CONSOLE OUTPUT -->
+        <div class="console-section">
+            <div class="section-label">Output Stream</div>
+            <div class="console-window" id="console">
+                <div class="console-empty" id="empty-msg">Waiting for module execution...</div>
+            </div>
+        </div>
+
+        <div class="footer">NEO.JS v2.0.7 // BUILD 2026.10.01</div>
+    </div>
+
+    <!-- Link to JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
